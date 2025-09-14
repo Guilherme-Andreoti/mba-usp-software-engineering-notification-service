@@ -3,9 +3,11 @@ package mba.usp.distributed.architecture.notification_service.model;
 import java.time.LocalDateTime;
 
 public class Notification {
+    private String id;
     private String message;
     private LocalDateTime timestamp;
     private String sensorId;
+    private long startProcessingTimestamp;
 
     public String getMessage() {
         return message;
@@ -30,4 +32,8 @@ public class Notification {
     public void setSensorId(String sensorId) {
         this.sensorId = sensorId;
     }
+
+    public long getStartProcessingTimestamp() {return this.startProcessingTimestamp;}
+
+    public String getId() {return this.id;}
 }
