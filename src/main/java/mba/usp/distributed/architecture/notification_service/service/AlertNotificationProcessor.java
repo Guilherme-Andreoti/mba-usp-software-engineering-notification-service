@@ -31,7 +31,7 @@ public class AlertNotificationProcessor {
 
         Timer.builder("processing_time")
                 .description("Total time taken from ingestion to completion")
-                .tags("service", "microservices", "record-id", alert.getId())
+                .tags("service", "microservices")
                 .register(registry)
                 .record(durationMillis, TimeUnit.MILLISECONDS);
     }
